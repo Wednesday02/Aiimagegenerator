@@ -29,6 +29,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch('https://aiimg-duow.onrender.com/api/v1/dalle', {
+          mode: 'no-cors',
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -57,6 +58,7 @@ const CreatePost = () => {
       setLoading(true);
       try {
         const response = await fetch('https://aiimg-duow.onrender.com/api/v1/post', {
+          mode: 'no-cors',
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
